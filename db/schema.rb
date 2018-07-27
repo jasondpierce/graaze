@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_182352) do
+ActiveRecord::Schema.define(version: 2018_07_27_211025) do
+
+  create_table "animals", force: :cascade do |t|
+    t.integer "tag_number"
+    t.string "breed"
+    t.date "dob"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date_exposed"
+  end
+
+  create_table "livestocks", force: :cascade do |t|
+    t.string "tag_number"
+    t.integer "breed"
+    t.date "DOB"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "payments", force: :cascade do |t|
     t.string "email"
@@ -18,6 +37,15 @@ ActiveRecord::Schema.define(version: 2018_07_27_182352) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_animals", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "animal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["animal_id"], name: "index_user_animals_on_animal_id"
+    t.index ["user_id"], name: "index_user_animals_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
