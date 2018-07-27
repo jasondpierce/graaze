@@ -40,7 +40,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
   
-  protectd
+  protected
   
   def configure_permitted_paramaters
     devise_paramater_sanitizer. for(:sign_up).push(:payment)
