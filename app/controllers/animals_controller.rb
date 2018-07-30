@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /animals
   # GET /animals.json
@@ -69,6 +70,6 @@ class AnimalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def animal_params
-      params.require(:animal).permit(:tag_number, :breed, :dob, :color)
+      params.require(:animal).permit(:tag_number, :breed, :dob, :color, :date_exposed, :herd_id, :id)
     end
 end

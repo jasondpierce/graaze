@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Herds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @herds.each do |herd| %>
+      <tr>
+        <td><%= herd.name %></td>
+        <td><%= herd.desc %></td>
+        <td><%= link_to 'Show', herd %></td>
+        <td><%= link_to 'Edit', edit_herd_path(herd) %></td>
+        <td><%= link_to 'Destroy', herd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Herd', new_herd_path %>

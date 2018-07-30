@@ -1,4 +1,4 @@
 class Animal < ApplicationRecord
-  has_many :user_animals
-  has_many :users, through: :user_animals
+  has_one :herd
+  has_many :users
 end

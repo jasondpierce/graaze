@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @herd.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @herd.desc %>
+</p>
+
+<%= link_to 'Edit', edit_herd_path(@herd) %> |
+<%= link_to 'Back', herds_path %>

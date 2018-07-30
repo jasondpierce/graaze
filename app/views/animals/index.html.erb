@@ -6,11 +6,12 @@
 <table>
   <thead>
     <tr>
-      <th>Tag number</th>
-      <th>Breed</th>
-      <th>Dob</th>
-      <th>Color</th>
-      <th>Date Exposed</th>
+      <th>Tag number </th>
+      <th>Breed </th>
+      <th>Dob </th>
+      <th>Color </th>
+      <th>Date Exposed </th>
+      <th>Herd</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,6 +24,7 @@
         <td><%= animal.dob %></td>
         <td><%= animal.color %></td>
         <td><%= animal.date_exposed %></td>
+        <td><%= Herd.find(animal.herd_id).name %></td>
         <td><%= link_to 'Show', animal %></td>
         <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
         <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
