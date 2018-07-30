@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_30_153156) do
+ActiveRecord::Schema.define(version: 2018_07_30_222509) do
 
   create_table "animals", force: :cascade do |t|
     t.integer "tag_number"
@@ -30,7 +30,9 @@ ActiveRecord::Schema.define(version: 2018_07_30_153156) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "animal_id"
+    t.integer "pasture_id"
     t.index ["animal_id"], name: "index_herds_on_animal_id"
+    t.index ["pasture_id"], name: "index_herds_on_pasture_id"
   end
 
   create_table "livestocks", force: :cascade do |t|
@@ -40,6 +42,16 @@ ActiveRecord::Schema.define(version: 2018_07_30_153156) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pastures", force: :cascade do |t|
+    t.date "date_grazed"
+    t.integer "available_forage"
+    t.integer "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "herd_id"
+    t.index ["herd_id"], name: "index_pastures_on_herd_id"
   end
 
   create_table "payments", force: :cascade do |t|

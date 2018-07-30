@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pastures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pasture ID</th>
+      <th>Date grazed</th>
+      <th>Available forage</th>
+      <th>Size</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pastures.each do |pasture| %>
+      <tr>
+        <td><%= pasture.id %></td>
+        <td><%= pasture.date_grazed %></td>
+        <td><%= pasture.available_forage %></td>
+        <td><%= pasture.size %></td>
+        <td><%= link_to 'Show', pasture %></td>
+        <td><%= link_to 'Edit', edit_pasture_path(pasture) %></td>
+        <td><%= link_to 'Destroy', pasture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pasture', new_pasture_path %>

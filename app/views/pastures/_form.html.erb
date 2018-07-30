@@ -1,0 +1,32 @@
+<%= form_with(model: pasture, local: true) do |form| %>
+  <% if pasture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pasture.errors.count, "error") %> prohibited this pasture from being saved:</h2>
+
+      <ul>
+      <% pasture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date_grazed %>
+    <%= form.date_select :date_grazed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available_forage %>
+    <%= form.number_field :available_forage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.number_field :size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

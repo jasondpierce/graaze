@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_grazed: 2018-07-30
+  available_forage: 1
+  size: 1
+
+two:
+  date_grazed: 2018-07-30
+  available_forage: 1
+  size: 1

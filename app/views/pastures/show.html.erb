@@ -1,22 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @herd.name %>
+  <strong>Date last grazed:</strong>
+  <%= @pasture.date_grazed %>
 </p>
 
 <p>
-  <strong>Desc:</strong>
-  <%= @herd.desc %>
+  <strong>Available forage:</strong>
+  <%= @pasture.available_forage %> <strong> #'s per acre</strong>
 </p>
+
+<p>
+  <strong>Size:
+  <%= @pasture.size %> Acre</strong>
+</p>
+
 <table>
-  
- <tbody>
-   Animals in Herd
+
+<tbody>
+   Animals on Pasture
    <th> Tag Number</th> 
    <th> Breed </th>
    <th> Date of Birth </th>
-   <% @herd.animals.each do |f| %>
+   <% @pasture.animals.each do |f| %>
     <tr>
       
       
@@ -29,8 +35,8 @@
         <td><%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
    <% end %>
-</tbody>
+  </tbody>
 </table>
-
-<%= link_to 'Edit', edit_herd_path(@herd) %> |
-<%= link_to 'Back', herds_path %>
+  
+  <%= link_to 'Edit', edit_pasture_path(@pasture) %> |
+<%= link_to 'Back', pastures_path %>
