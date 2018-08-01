@@ -57,6 +57,62 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 12px;
 }
 
+
+/* -- Topbar -- */
+.tagline {
+  background: #3bafda;
+  font-size: 13px;
+  color: #EEF2F5;
+}
+.email, .phone {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  padding: 11px 0;
+  letter-spacing: 0.02em;
+}
+.tagline .pull-left i {
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.email a {
+  transition: all 300ms;
+  -webkit-transition: all 300ms;
+  color: #EEF2F5;
+}
+.top_socials {
+  margin: 0 12px;
+}
+.top_socials li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0;
+  padding: 0;
+}
+.top_socials a {
+    display: inline-block;
+    color: #3bafda;
+    line-height: 31px;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    text-align: center;
+    background-color: transparent;
+    font-weight: 400;
+    height: 28px;
+    width: 28px;
+    margin: 8px 4px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+.top_socials a:hover {
+    background-color: #ffffff;
+}
+
+
+
 /*===== Navbar Custom ======*/
 
 
