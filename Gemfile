@@ -11,7 +11,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'jquery-rails'
 gem 'stripe'
-gem 'bootstrap-sass'
+
 gem 'airbrake', '~> 7.3'
 
 # Use Puma as the app server
