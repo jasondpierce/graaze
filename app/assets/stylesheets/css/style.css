@@ -142,10 +142,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bg-img-1 {
-  background-image: image_url("bg2.jpg");
+  background-image: image_tag("bg2.jpg");
 }
 .bg-img-2 {
-  background-image: image_url("bg1.jpg");
+  background-image: image_tag("bg1.jpg");
 }
 .page-sub-title {
   margin: 10px 0px !important;
@@ -203,7 +203,7 @@ h1,h2,h3,h4,h5,h6 {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: image_url("preloader.gif");
+  background-image: image_tag("preloader.gif");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
