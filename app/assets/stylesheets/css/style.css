@@ -142,10 +142,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bg-img-1 {
-  background: image_url("bg2.jpg");
+  background-image: image_url("bg2.jpg");
 }
 .bg-img-2 {
-  background: image_url("bg1.jpg");
+  background-image: image_url("bg1.jpg");
 }
 .page-sub-title {
   margin: 10px 0px !important;
@@ -183,6 +183,33 @@ h1,h2,h3,h4,h5,h6 {
   background-attachment: fixed;
 }
 
+/* PRE LOADER */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fefefe;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.status {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: image_url("preloader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: -20px 0 0 -20px;
+}
 
 /*======= Buttons ======= */
 .btn {
