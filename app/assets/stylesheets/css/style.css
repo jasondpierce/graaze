@@ -58,6 +58,44 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+/*======= FEATURES =======*/
+.feature-detail ul li {
+  padding-left: 25px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #9aa7af;
+}
+.feature-detail ul li i {
+  position: absolute;
+  left: 0px;
+  top: 3px;
+}
+
+.feature-detail p.sub {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+
+/*======= FUN FACTS =======*/
+.fun-facts {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #ffffff;
+}
+.fun-facts .facts i {
+  color: #3bafda;
+  font-size: 36px;
+}
+
+.fun-facts h1,.fun-facts h4 {
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+
+
 /*======= Pricing =======*/
 .pricing-item{
   margin: 0 0 30px;
