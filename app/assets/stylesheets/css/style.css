@@ -142,10 +142,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bg-img-1 {
-  background: asset_url("bg2.jpg");
+  background: image_url("bg2.jpg");
 }
 .bg-img-2 {
-  background: asset_url("bg1.jpg");
+  background: image_url("bg1.jpg");
 }
 .page-sub-title {
   margin: 10px 0px !important;
