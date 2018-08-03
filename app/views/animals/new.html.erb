@@ -2,5 +2,5 @@
 
 <%= render 'form', animal: @animal %>
 
-<%= link_to 'Back', user_animals_path(user: current_user, tag_number: @animal.tag_number),
+<%= link_to 'Back', animals_path(user: current_user, tag_number: @animal.tag_number),
                                       class: "btn btn-xs btn-success", method: :post %>

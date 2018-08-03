@@ -20,15 +20,15 @@
 
         <!-- Animate -->
         
-         <%= stylesheet_link_tag 'css/bootstrap.min.css', media: 'all' %>
+         <%= stylesheet_link_tag 'css/animate.css', media: 'all' %>
 
         <!-- Icon-font -->
        
-        <%= stylesheet_link_tag 'css/bootstrap.min.css', media: 'all' %>
+        <%= stylesheet_link_tag 'css/themify-icons.css', media: 'all' %>
 
         <!-- Custom styles for this template -->
         
-        <%= stylesheet_link_tag 'css/style', media: 'all' %>
+        <%= stylesheet_link_tag 'css/style.css', media: 'all' %>
 
     </head>
 
@@ -63,7 +63,7 @@
 
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand logo" href="#">Minton</a>
+                <a class="navbar-brand logo" href="#">Graaze</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -74,13 +74,13 @@
                             <a class="nav-link" href="#how-it-work">How it work</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#features">Features</a>
+                            <%= link_to 'Animals', animals_path, class: "nav-link" %>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#pricing">Pricing</a>
+                             <%= link_to 'Herds', herds_path, class: "nav-link" %>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#faq">FAQ</a>
+                            <%= link_to 'Pastures', pastures_path, class: "nav-link" %>
                         </li>
                     </ul>
 

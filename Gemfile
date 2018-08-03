@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'stripe'
 gem 'bootstrap-sass'
 gem 'airbrake', '~> 7.3'
+gem "font-awesome-rails"
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

@@ -12,6 +12,10 @@ Rails.application.config.assets.precompile += %w( css/bootstrap.min.css)
 Rails.application.config.assets.precompile += %w( css/animate.css)
 Rails.application.config.assets.precompile += %w( css/style.css)
 Rails.application.config.assets.precompile += %w( css/themify-icons.css)
+Rails.application.config.assets.precompile += %w( css/icons.css )
+
+Rails.application.config.assets.precompile += %w( theme/modernizr.min.js )
+Rails.application.config.assets.precompile += ['*.js' ] 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
