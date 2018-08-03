@@ -142,10 +142,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bg-img-1 {
-  background-image: image_tag("bg2.jpg");
+  background-image: url(/assets/bg1.jpg);
 }
 .bg-img-2 {
-  background-image: image_tag("bg1.jpg");
+  background-image: image_tag("bg2.jpg");
 }
 .page-sub-title {
   margin: 10px 0px !important;
