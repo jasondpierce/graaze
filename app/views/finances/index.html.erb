@@ -1,40 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center">
-  <strong>Animal Group:</strong>
-  <%= @herd.name %>
-</h1>
-
-
-<table class="table">
-  
- <tbody>
-   <h2>
-     Animals in Herd
-   </h2>
-   <h3><%= link_to 'Add', new_animal_path %> </h3>
-   <th> Tag Number</th> 
-   <th> Breed </th>
-   <th> Date of Birth </th>
-   <% @herd.animals.each do |f| %>
-    <tr>
-      
-      
-      
-        <td><%= f.tag_number %></td>
-        <td><%= f.breed %></td>
-        <td><%= f.dob %></td>
-        <td><%= link_to 'Show', f %></td>
-        <td><%= link_to 'Edit', edit_animal_path(f) %></td>
-        <td><%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-   <% end %>
-</tbody>
-</table>
-
-<h2>Finances<h2>
-  
-  <h3><%= link_to 'Add', new_finance_path %> </h3>
+<h1>Finances</h1>
 <table class="table">
   
  
@@ -53,7 +19,7 @@
   </thead>
 
   <tbody>
-    <% @herd.finances.each do |finance| %>
+    <% @finances.each do |finance| %>
     <% if finance.herd_id = 1 %> 
       <tr>
         <% if finance.herd_id %>
@@ -79,7 +45,7 @@
     <% end %>
     <% end %>
     <% @total = 0 %>
-    <% @herd.finances.each do |finance| %>
+    <% @finances.each do |finance| %>
     <% if finance.tran_type == "Expense" %>
     <% @total = @total - finance.amount %>
     <% else %>
@@ -89,14 +55,13 @@
     <tr>
       <th>Total</th>
       <td></td>
-      <td></td>
       <td><%= @total %></td>
     </tr>
-   </tbody>
+   
+  </tbody>
 </table>
 
+<br>
 
-<%= link_to 'Edit', edit_herd_path(@herd) %> |
-<%= link_to 'Back', herds_path %>
-  
-  
+
+<%= link_to 'New Finance', new_finance_path %>

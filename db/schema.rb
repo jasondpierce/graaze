@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_30_222509) do
+ActiveRecord::Schema.define(version: 2018_08_04_211716) do
 
   create_table "animals", force: :cascade do |t|
     t.integer "tag_number"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 2018_07_30_222509) do
     t.date "date_exposed"
     t.integer "herd_id"
     t.index ["herd_id"], name: "index_animals_on_herd_id"
+  end
+
+  create_table "finances", force: :cascade do |t|
+    t.string "item"
+    t.string "category"
+    t.decimal "amount"
+    t.string "pay_type"
+    t.string "tran_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "herd_id"
+    t.index ["herd_id"], name: "index_finances_on_herd_id"
   end
 
   create_table "herds", force: :cascade do |t|

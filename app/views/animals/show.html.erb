@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<%= @animal.id %>
-<%= @animal.herd_id %>
 
 <p>
   <strong>Tag number:</strong>
@@ -30,7 +28,7 @@
 
 <p>
   <strong>Herd:</strong>
-  <% unless @animal.herd_id.nil? %>
+  <% if @animal.herd_id != 0 %>
   <%= Herd.find(@animal.herd_id).name %>
   <% end %>
 </p>

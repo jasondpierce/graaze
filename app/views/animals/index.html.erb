@@ -24,7 +24,9 @@
         <td><%= animal.dob %></td>
         <td><%= animal.color %></td>
         <td><%= animal.date_exposed %></td>
+         <% if animal.herd %>
         <td><%= Herd.find(animal.herd_id).name %></td>
+         <% end %>
         <td><%= link_to 'Show', animal %></td>
         <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
         <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>

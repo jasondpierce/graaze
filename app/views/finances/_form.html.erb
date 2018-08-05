@@ -1,0 +1,53 @@
+<%= form_with(model: finance, local: true) do |form| %>
+  <% if finance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(finance.errors.count, "error") %> prohibited this finance from being saved:</h2>
+
+      <ul>
+      <% finance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+<%= form.collection_select(:herd_id, Herd.all, :id, :name, {prompt: "Enter a Herd"}, {class: "w3-select"}) %>  <%#= Herd.find(@animal.herd_id).name %>
+</div>
+  
+  <div class="field">
+    <%#= form.label :herd_id %>
+    <%#= form.text_field :herd_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item %>
+    <%= form.text_field :item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pay_type %>
+    <%= form.select :pay_type, ['CC', 'Check', 'Cash']%>
+  </div>
+
+  <div class="field">
+    <%= form.label :tran_type %>
+    <%= form.select :tran_type, ['Income', 'Expense']%>
+      
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

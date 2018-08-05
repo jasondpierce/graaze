@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Herd:</strong>
+  <%= Herd.find(@finance.herd_id).name %>
+</p>
+
+
+<p>
+  <strong>Item:</strong>
+  <%= @finance.item %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @finance.category %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @finance.amount %>
+</p>
+
+<p>
+  <strong>Pay type:</strong>
+  <%= @finance.pay_type %>
+</p>
+
+<p>
+  <strong>Tran type:</strong>
+  <%= @finance.tran_type %>
+</p>
+
+<%= link_to 'Edit', edit_finance_path(@finance) %> |
+<%= link_to 'Back', finances_path %>

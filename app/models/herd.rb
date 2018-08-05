@@ -1,4 +1,5 @@
 class Herd < ApplicationRecord
   has_many :animals
-  has_one :herd
+  has_many :finances
+  has_one :pasture
 end

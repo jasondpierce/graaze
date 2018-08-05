@@ -43,7 +43,7 @@
 
 <%#  if animal.id %> 
 <div class="field">
-<%= form.collection_select(:herd, Herd.all, :animals, :name, {prompt: "Enter a Herd"}, {class: "w3-select"}) %> Current Herd: <%#= Herd.find(@animal.herd_id).name %>
+<%= form.collection_select(:herd_id, Herd.all, :id, :name, {prompt: "Enter a Herd"}, {class: "w3-select"}) %> 
 </div>
 <%# end %>
   
