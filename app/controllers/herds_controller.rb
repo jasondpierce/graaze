@@ -12,6 +12,10 @@ class HerdsController < ApplicationController
   # GET /herds/1.json
   def show
   end
+  
+  def dashboard_select
+     @herd = current_user.herds.build
+  end
 
   # GET /herds/new
   def new

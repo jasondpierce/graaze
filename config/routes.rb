@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :livestock
   
   #resources :users, only: [:show]
-  #get 'livestock', to: 'livestock#index'
+  get 'dashboard_select', to: 'herds#dashboard_select'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

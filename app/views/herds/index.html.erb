@@ -2,7 +2,7 @@
 
 <h1>Herds</h1>
 
-<table class="table">
+<table class="table-hover table-striped table-bordered" cellpadding="10">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= herd.name %></td>
         <td><%= herd.desc %></td>
-        <td><%= link_to 'Show', herd %></td>
-        <td><%= link_to 'Edit', edit_herd_path(herd) %></td>
-        <td><%= link_to 'Destroy', herd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', herd, class: "btn btn-primary btn-rounded animated fadeInDown wow" %></td>
+        <td><%= link_to 'Edit', edit_herd_path(herd), class: "btn btn-primary btn-rounded animated fadeInDown wow"  %></td>
+        <td><%= link_to 'Destroy', herd, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-rounded animated fadeInDown wow" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,9 @@
 
 <br>
 
-<%= link_to 'New Herd', new_herd_path %>
+<div style="text-align: center;">
+
+<%= link_to 'New Herd', new_herd_path, class: "btn btn-primary btn-rounded w-lg animated fadeInDown wow" %>
+
+  
+</div>

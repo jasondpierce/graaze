@@ -11,13 +11,13 @@
   Current Pasture - (<%= @herd.pasture_id %>)
   <%= link_to 'Move Animal Group', edit_herd_path{@herd.pasture_id}, class: "btn btn-primary btn-rounded w-lg animated fadeInDown wow" %>
 </h2>
-<table class="table">
+<table class="table-hover table-striped table-bordered" cellpadding="10">
   
  <tbody>
    <h2>
      Animals in Herd
    </h2>
-   <h3><%= link_to 'Add', new_animal_path, class: "btn btn-primary btn-rounded w-lg animated fadeInDown wow" %> </h3>
+   <h3><%= link_to 'Add', new_animal_path{@herd.herd_id}, class: "btn btn-primary btn-rounded w-lg animated fadeInDown wow" %> </h3>
    <th> Tag Number</th> 
    <th> Breed </th>
    <th> Date of Birth </th>
@@ -34,13 +34,14 @@
         <td><%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
    <% end %>
+  
 </tbody>
 </table>
 
 <h2>Finances<h2>
   
-  <h3><%= link_to 'Add', new_finance_path, class: "btn btn-primary btn-rounded w-lg animated fadeInDown wow" %> </h3>
-<table class="table">
+  <h3><%= link_to 'Add', new_finance_path{@herd.herd_id}, class: "btn btn-primary btn-rounded w-lg animated fadeInDown wow" %> </h3>
+<table class="table-hover table-striped table-bordered" cellpadding="10">
   
  
 

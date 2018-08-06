@@ -12,7 +12,8 @@
   <% end %>
 
  <div class="field">
-<%= form.collection_select(:herd_id, Herd.all, :id, :name, {prompt: "Enter a Herd"}, {class: "w3-select"}) %>  <%#= Herd.find(@animal.herd_id).name %>
+<%= form.label "Select Animal Group" %>   
+<%= form.collection_select(:herd_id, current_user.herds, :id, :name, {prompt: "Enter a Herd"}, {class: "w3-select"}) %>  <%#= Herd.find(@animal.herd_id).name %>
 </div>
   
   <div class="field">

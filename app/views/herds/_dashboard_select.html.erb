@@ -1,0 +1,19 @@
+<%= form_with(model: herd, local: true) do |form| %>
+  <% if herd.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(herd.errors.count, "error") %> prohibited this herd from being saved:</h2>
+
+      <ul>
+      <% herd.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+  <%= form.label "Select Animal Group:"%>
+  <%= form.collection_select(:herd_id, current_user.herds, :id, :name, {prompt: "Enter a Herd"}, {class: "w3-select form-control"}) %> 
+</div>
+   
+<% end %>   
