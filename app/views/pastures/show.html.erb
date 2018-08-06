@@ -15,6 +15,13 @@
   <%= @pasture.size %> Acre</strong>
 </p>
 
+<% if @pasture.herd_id %>
+  <p>
+    <strong>Herd on Pasture:
+    <%= @pasture.herd.name %></strong>
+  </p>
+<% end %>
+
 <table>
 
 <tbody>
@@ -30,6 +37,7 @@
         <td><%= f.tag_number %></td>
         <td><%= f.breed %></td>
         <td><%= f.dob %></td>
+        
         <td><%= link_to 'Show', f %></td>
         <td><%= link_to 'Edit', edit_animal_path(f) %></td>
         <td><%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %></td>

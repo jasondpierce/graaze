@@ -4,7 +4,7 @@ class FinancesController < ApplicationController
   # GET /finances
   # GET /finances.json
   def index
-    @finances = Finance.all
+    @finances = current_user.finances
   end
 
   # GET /finances/1
@@ -14,7 +14,7 @@ class FinancesController < ApplicationController
 
   # GET /finances/new
   def new
-    @finance = Finance.new
+    @finance = current_user.finances.build
   end
 
   # GET /finances/1/edit
@@ -24,7 +24,7 @@ class FinancesController < ApplicationController
   # POST /finances
   # POST /finances.json
   def create
-    @finance = Finance.new(finance_params)
+    @finance = current_user.finances.new(finance_params)
 
     respond_to do |format|
       if @finance.save

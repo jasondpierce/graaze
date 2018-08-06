@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_04_211716) do
+ActiveRecord::Schema.define(version: 2018_08_06_175039) do
 
   create_table "animals", force: :cascade do |t|
     t.integer "tag_number"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_211716) do
     t.datetime "updated_at", null: false
     t.date "date_exposed"
     t.integer "herd_id"
+    t.integer "user_id"
     t.index ["herd_id"], name: "index_animals_on_herd_id"
   end
 
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_211716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "herd_id"
+    t.integer "user_id"
     t.index ["herd_id"], name: "index_finances_on_herd_id"
   end
 
@@ -43,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_211716) do
     t.datetime "updated_at", null: false
     t.integer "animal_id"
     t.integer "pasture_id"
+    t.integer "user_id"
     t.index ["animal_id"], name: "index_herds_on_animal_id"
     t.index ["pasture_id"], name: "index_herds_on_pasture_id"
   end
@@ -63,6 +66,7 @@ ActiveRecord::Schema.define(version: 2018_08_04_211716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "herd_id"
+    t.integer "user_id"
     t.index ["herd_id"], name: "index_pastures_on_herd_id"
   end
 

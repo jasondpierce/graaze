@@ -4,7 +4,7 @@ class PasturesController < ApplicationController
   # GET /pastures
   # GET /pastures.json
   def index
-    @pastures = Pasture.all
+    @pastures = current_user.pastures
   end
 
   # GET /pastures/1
@@ -14,7 +14,7 @@ class PasturesController < ApplicationController
 
   # GET /pastures/new
   def new
-    @pasture = Pasture.new
+    @pasture = current_user.pastures.build
   end
 
   # GET /pastures/1/edit
@@ -24,7 +24,7 @@ class PasturesController < ApplicationController
   # POST /pastures
   # POST /pastures.json
   def create
-    @pasture = Pasture.new(pasture_params)
+    @pasture = current_user.pastures.new(pasture_params)
 
     respond_to do |format|
       if @pasture.save
@@ -69,6 +69,6 @@ class PasturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pasture_params
-      params.require(:pasture).permit(:date_grazed, :available_forage, :size)
+      params.require(:pasture).permit(:date_grazed, :available_forage, :size, :herd_id)
     end
 end

@@ -28,9 +28,9 @@
 
 <p>
   <strong>Herd:</strong>
-  <% if @animal.herd_id != 0 %>
+  <%# if @animal.herd_id != 0 %>
   <%= Herd.find(@animal.herd_id).name %>
-  <% end %>
+  <%# end %>
 </p>
 
 

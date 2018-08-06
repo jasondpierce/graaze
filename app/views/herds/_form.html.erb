@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+<div class="field">
+<%= form.collection_select(:pasture_id, Pasture.all, :id, :id, {prompt: "Enter a Herd"}, {class: "w3-select"}) %> 
+  
+</div>
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>

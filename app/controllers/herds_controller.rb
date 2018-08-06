@@ -1,10 +1,11 @@
 class HerdsController < ApplicationController
   before_action :set_herd, only: [:show, :edit, :update, :destroy]
-
+  
+  
   # GET /herds
   # GET /herds.json
   def index
-    @herds = Herd.all
+    @herds = current_user.herds
   end
 
   # GET /herds/1
@@ -14,7 +15,7 @@ class HerdsController < ApplicationController
 
   # GET /herds/new
   def new
-    @herd = Herd.new
+    @herd = current_user.herds.build
   end
 
   # GET /herds/1/edit
@@ -24,7 +25,7 @@ class HerdsController < ApplicationController
   # POST /herds
   # POST /herds.json
   def create
-    @herd = Herd.new(herd_params)
+    @herd = current_user.herds.new(herd_params)
 
     respond_to do |format|
       if @herd.save
@@ -69,6 +70,6 @@ class HerdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def herd_params
-      params.require(:herd).permit(:name, :desc, :animals)
+      params.require(:herd).permit(:name, :desc, :animals, :pasture_id)
     end
 end
